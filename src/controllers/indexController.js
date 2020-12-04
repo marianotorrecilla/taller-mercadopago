@@ -56,7 +56,7 @@ module.exports = {
                 failure : url + 'failure',
             },
 
-            notification_url : host + 'notifications',
+            notification_url : host + 'webhooks',
 
             auto_return : 'approved',
 
