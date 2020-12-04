@@ -34,8 +34,8 @@ module.exports = {
         
     },
 
-    notifications : (req, res) => {
-        console.log(req.body)
+    webhooks : (req, res) => {
+        console.log('webhook', req.body)
 
         res.status(200).end('Ok')
     },

@@ -14,7 +14,9 @@ router.get('/detail', indexController.detail);
 router.get('/callback', indexController.callback);
 
 /* notificaciones -----  no esta localmente para testear solo con el deployed*/
-router.post('/notifications', indexController.notifications);
+router.post('/webhooks', indexController.webhooks);
+
+
 
 
 /* POST compra */
