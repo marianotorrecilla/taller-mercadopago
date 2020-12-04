@@ -65,40 +65,40 @@ module.exports = {
             auto_return : 'approved',
 
             payer : {
-                name : 'Ryan',
-                surname: 'Dahl',
+                name : 'Lalo',
+                surname: 'Landa',
                 email: 'test_user_63274575@testuser.com',
                 phone: {
                     area_code: '11',
-                    number: 55556666,
+                    number: 22223333,
                 },
                 address: {
-                    street_name: 'Monroe',
-                    zip_code: '1234',
-                    street_number: 860
+                    street_name: 'False',
+                    zip_code: '1111',
+                    street_number: 123
                 }
             },
 
             payment_methods : {
 
                 excluded_payment_methods : [
-                    {id : 'visa'}
+                    {id : 'amex'}
                 ],
 
                 excluded_payment_types : [
                     {id : 'atm'}
                 ],
 
-                installments : 12
+                installments : 6
             },
 
             items : [
                 {
                     id : 1234,
                     picture_url : 'https://mercadopago2020.herokuapp.com/images/products/jordan.jpg',
-                    title : 'Nombre del producto',
+                    title : req.query.title,
                     description : 'Dispositivo móvil de Tienda e-commerce',
-                    unit_price : 999,
+                    unit_price : req.query.price,
                     quantity: 1  
                 }  
             ],
