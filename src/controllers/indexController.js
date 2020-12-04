@@ -14,33 +14,37 @@ module.exports = {
     },
 
     callback: (req, res) => {
-        console.log(req.query);
-        
+        console.log(req.query)
+
         if(req.query.status.includes('success')) {
             return res.render('success')
         }
-
-        if(req.query.status.includes('pending')) {
+        
+        if(req.query.status.includes('pending') ) {
             return res.render('pending')
         }
 
         if(req.query.status.includes('failure')) {
             return res.render('failure')
         }
-        
+
         return res.status(404).end()
+        
+        
+        
     },
 
     notifications : (req, res) => {
-
-        console.log(req.body);
+        console.log(req.body)
 
         res.status(200).end('Ok')
     },
 
+    
+
     comprar: (req, res) => {
 
-        const host = 'http://mi-app.herokuapp.com/'
+        const host = 'http://localhost:3000/'
 
         const url = host + 'callback?status='
 
@@ -48,7 +52,7 @@ module.exports = {
 
             back_urls : {
                 success : url + 'success',
-                pending: url + 'pending',
+                pending : url + 'pending',
                 failure : url + 'failure',
             },
 
@@ -86,7 +90,7 @@ module.exports = {
 
             items : [
                 {
-                    id : '1234',
+                    id : 1234,
                     picture_url : 'https://mercadopago2020.herokuapp.com/images/products/jordan.jpg',
                     title : 'Nombre del producto',
                     description : 'Dispositivo móvil de Tienda e-commerce',

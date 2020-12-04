@@ -9,7 +9,7 @@ router.get('/', indexController.home);
 /* GET detail page */
 router.get('/detail', indexController.detail);
 
-/*redireccion back urls */
+/*redireccion back urls --- siempre se llegan por get */
 
 router.get('/callback', indexController.callback);
 
