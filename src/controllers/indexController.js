@@ -96,9 +96,9 @@ module.exports = {
                 {
                     id : 1234,
                     picture_url : 'https://mercadopago2020.herokuapp.com/images/products/jordan.jpg',
-                    title : 'Nombre del producto',
+                    title : req.body.title,
                     description : 'Dispositivo móvil de Tienda e-commerce',
-                    unit_price : 999,
+                    unit_price : req.body.price,
                     quantity: 1  
                 }  
             ],
